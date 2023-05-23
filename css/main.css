@@ -226,6 +226,171 @@ a:hover {
 .last-nav .logo, .last-nav .menu-icon,.right-part2 {
     display: none;
 }
+main{
+        background-color: #F5F5F6;
+}
+  .hero {
+    grid-template-columns: 2fr 1fr;
+    display: grid;
+    padding: 2% 5%;
+    gap: 10px;
+  }
+  .hero img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .main-ad {
+    grid-row: 1/3;
+  }
+  .hero .main-ad,.hero .ad {
+    color: #F5F5F6;
+    position:relative;
+    /* overflow: hidden; */
+  } 
+  .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10% 20%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .layer .title{
+    font-size: 4rem;
+    padding: 1%;
+    transition: 1s;
+  }
+  @keyframes one-move {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  .main-ad:hover .title,.ad:hover .title{
+    animation: one-move 1s linear 0s 1 alternate;;
+  }
+  .layer span{
+    font-size: 1.2rem;
+    padding: 2%;
+    color: #F5F5F6;
+    background-color: transparent;
+    border: 1px solid #F5F5F6;
+    margin-top: 3%;
+
+  }
+  .main-ad .layer span:hover{
+    background-color: #F5F5F6;
+    color: #3D464D;
+  }
+.ad{
+    overflow: hidden;
+}
+  .ad .layer .title{
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .ad .layer span{
+    background-color: #ffd334;
+    font-size: 1rem;
+    color: #3D464D;
+  }
+  .ad .layer span:hover{
+    background-color: #e7b00d;
+  }
+  .ad img{
+    transition: 1s;
+  }
+  .ad:hover img{
+    transform: rotate(-10deg) scale(1.4);
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    padding: 2% 5%;
+    gap: 3%;
+  }
+  .features .feature{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 6% 3%;
+  }
+  .features .feature i{
+   color: #FFD333;
+   font-size: 2rem;
+  }
+  .features .feature p{
+    font-size: 1.2rem;
+    margin-left: 2%;
+    font-weight: bold;
+   }
+   .categories{
+    padding: 2% 5%;
+   }
+   .categories .cat-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+   } 
+   .categories .cat-head p{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1%;
+   } 
+   .categories .cat-head span{
+    border-bottom: 1px dashed #3D464D;
+    flex-grow: 2;
+   } 
+   .cat-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    
+  }
+  .cat-container .category{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    transition: 1s;
+    margin: 3%;
+  }
+  .cat-container .category div {
+    width: 100px;
+   overflow: hidden;
+  }
+  .cat-container .category img{
+    transition: 1s;
+    width: 100px;
+  }
+  .cat-container .category .details {
+    margin-left: 2%;
+    flex-grow: 2;
+  }
+  .cat-container .category .details .cat-title{
+    font-size: 1rem;
+    width: fit-content;
+    font-weight: bold;
+  }
+  .cat-container .category .details .cat-num{
+    font-size: 0.7rem;
+  }
+  .cat-container .category:hover{
+    background-color: #FFD333;
+  } .cat-container .category:hover img{
+    transform: rotate(-10deg) scale(1.2);
+  }
 
 @media screen and (max-width: 900px) {
     .first-nav {
@@ -281,5 +446,31 @@ a:hover {
         border: #3D464D 1px solid;
         padding: 0 2px 0 2px;
     }
+
+    .hero {
+        grid-template-columns: 1fr;
+      }
+      .main-ad .layer .title{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .main-ad .layer .description{
+        font-size: 0.8rem;
+      }
+      .features {
+        grid-template-columns: 1fr 1fr;       
+      }
+      .cat-container {
+        grid-template-columns: 1fr 1fr;
+      }
 }
+@media screen and (max-width: 600px) {
+    .features {
+      grid-template-columns: 1fr;       
+    }
+    .cat-container {
+      grid-template-columns: 1fr;
+    }
+}
+
 
